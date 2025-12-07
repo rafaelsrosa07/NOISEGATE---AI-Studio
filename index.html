@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOISE GATE v2.0</title>
+    <!-- Favicon: Funil Cyberpunk Verde -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'%3E%3Cpath d='M4 12L24 12L32 28L40 12L60 12' stroke='%2310b981' stroke-width='3' stroke-linecap='square'/%3E%3Ccircle cx='4' cy='12' r='3' fill='%2310b981' /%3E%3Ccircle cx='60' cy='12' r='3' fill='%2310b981' /%3E%3Cpath d='M32 28V52' stroke='%2310b981' stroke-width='3' stroke-dasharray='4 2'/%3E%3Cpath d='M24 52H40' stroke='%2310b981' stroke-width='3' /%3E%3Ccircle cx='32' cy='58' r='4' fill='%2310b981' /%3E%3Cpath d='M16 12L26 32' stroke='%2310b981' stroke-width='1' stroke-opacity='0.5' /%3E%3Cpath d='M48 12L38 32' stroke='%2310b981' stroke-width='1' stroke-opacity='0.5' /%3E%3C/svg%3E">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#10b981">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            colors: {
+              emerald: {
+                400: '#34d399',
+                500: '#10b981',
+                600: '#059669',
+                900: '#064e3b',
+                950: '#022c22',
+              },
+              neutral: {
+                800: '#262626',
+                900: '#171717',
+              }
+            },
+            animation: {
+              'pulse-fast': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #000;
+        color: #e5e5e5;
+        font-family: 'JetBrains Mono', monospace;
+      }
+      /* Custom Scrollbar for Cyberpunk feel */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #10b981;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #34d399;
+      }
+      
+      .clip-path-slant {
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 95% 100%, 0 100%);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "firebase/app": "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js",
+    "firebase/auth": "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js",
+    "firebase/firestore": "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js",
+    "firebase/analytics": "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
